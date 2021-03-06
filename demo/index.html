@@ -21,10 +21,10 @@
 		canvas.setAttribute("height", imageObj.height);
 		context.drawImage(imageObj, 0, 0);
 		var mser = new window.MSER({
-			delta: 10, // Delta parameter of the MSER algorithm
-			minArea: 0.0001, // Minimum area of any stable region relative to the image domain area
-			maxArea: 0.5, // Maximum area of any stable region relative to the image domain area
-			maxVariation: 0.5, // Maximum variation (absolute stability score) of the regions
+			delta: 30, // Delta parameter of the MSER algorithm
+			minArea: 0.01, // Minimum area of any stable region relative to the image domain area
+			maxArea: 0.8, // Maximum area of any stable region relative to the image domain area
+			maxVariation: 0.05, // Maximum variation (absolute stability score) of the regions
 			minDiversity: 0.33 // Minimum diversity of the regions
 		});
 		// extract maximally stable extremal regions from image
